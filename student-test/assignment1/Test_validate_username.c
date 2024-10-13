@@ -14,18 +14,15 @@
  */
 void test_validate_my_username()
 {
-    // Call the function to get the hard-coded username
+    // Call my_username function to get the hard-coded username
     const char* str1 = my_username();
     
-    // Obtain the username from the config file
+    // Obtain the username from the config file using malloc_username_from_conf_file
     char* str2 = malloc_username_from_conf_file();
 
-    // Check for NULL from malloc_username_from_conf_file
+    // Check for NULL from the config file
     TEST_ASSERT_NOT_NULL_MESSAGE(str2, "Failed to read username from config file!");
 
     // Verify that the two usernames are equal
     TEST_ASSERT_EQUAL_STRING_MESSAGE(str1, str2, "Strings don't match!");
-
-    // Free allocated memory if necessary
-   // free(str2);
 }
