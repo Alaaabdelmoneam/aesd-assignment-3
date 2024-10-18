@@ -1,0 +1,2 @@
+aarch64-none-linux-gnu-gcc -Wall -Werror -g -c finder-app/writer.c -o finder-app/writer.o
+aarch64-none-linux-gnu-gcc -Wall -Werror -g -o finder-app/writer finder-app/writer.o
